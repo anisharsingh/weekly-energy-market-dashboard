@@ -1,0 +1,6 @@
+week_ending,wti_settle,brent_settle,henry_hub_spot,crude_stocks_mb,cushing_mb,refinery_util_pct,gasoline_stocks_mb,natgas_storage_bcf,hdd,cdd,elec_demand_gwh_day,data_notes
+2026-09-11,100.05,104.61,2.71,423.429,21.482,96.8,207.732,3298.0,0.0,89.2,13642.235,Baseline row.
+2026-09-18,100.3,103.87,2.97,426.398,23.748,94.0,206.046,3351.0,0.0,75.82,13284.864,EIA data; WTI and Brent settles confirmed.
+2026-09-25,92.41,104.32,3.21,427.32,24.301,92.5,204.362,3415.0,0.0,45.42,12111.635,EIA data; Brent is the Nov contract (rolled to Dec the next week); WTI weekly change includes a roll.
+2026-10-02,91.11,102.25,2.9,424.134,24.745,92.7,204.744,3500.0,0.0,45.0,11730.098,EIA data; Brent is the Dec contract after the roll (Reuters like-for-like +0.11%).
+2026-10-09,91.85,104.72,,,,,,,0.0,41.88,11446.253,Prices only. EIA inventories and gas storage due Oct 14 and 15.
