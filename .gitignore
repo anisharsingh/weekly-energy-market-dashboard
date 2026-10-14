@@ -10,3 +10,4 @@ __pycache__/
 forecasting/data/*.csv
 forecasting/results/oof_predictions.csv
 .pytest_cache/
+.edit_backup_polish/
