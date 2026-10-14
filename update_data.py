@@ -26,6 +26,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from contract_rolls import roll_dates_by_week
+
 ROOT = Path(__file__).resolve().parent
 CSV = ROOT / "data" / "weekly.csv"
 EIA_BASE = "https://api.eia.gov/v2"
@@ -167,6 +169,17 @@ def main() -> int:
         print(f"cdd: filled {fill(df, 'cdd', pd.Series(cdd), args.overwrite)} cell(s)")
     except Exception as e:  # noqa: BLE001
         print(f"weather: skipped ({e})")
+
+    # 5) Futures contract roll weeks: computed from the exchange expiry rules (no network needed)
+    rolls = roll_dates_by_week(weeks)
+    for col in ("wti_roll_date", "brent_roll_date"):
+        values = [rolls[col].get(w, "") for w in df["week_ending"]]
+        if col in df.columns:
+            df[col] = values
+        else:
+            pos = df.columns.get_loc("data_notes") if "data_notes" in df.columns else len(df.columns)
+            df.insert(pos, col, values)
+    print(f"contract rolls: {sum(1 for c in ('wti_roll_date', 'brent_roll_date') for v in df[c] if v)} roll flag(s) set")
 
     df["week_ending"] = df["week_ending"].dt.strftime("%Y-%m-%d")
     df.to_csv(CSV, index=False)
