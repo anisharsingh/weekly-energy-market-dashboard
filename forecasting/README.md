@@ -1,5 +1,7 @@
 # Day-Ahead Load Forecast (NYISO)
 
+> **Status: in progress.** The data pipeline, features, models and tests are written. The first full run on real EIA data is not finished, so there are no results yet.
+
 A day-ahead hourly electricity demand forecast for the New York ISO, built with EIA and weather data. It compares two simple baselines against ridge regression and gradient boosting, evaluates them with a leakage-free monthly backtest, and analyzes where the models fail, including on heat-wave days.
 
 Part of my [weekly energy market dashboard](../README.md). It reuses the same EIA API key and the same pattern of a fetch script that caches data to CSV.
@@ -48,20 +50,7 @@ Time-based only, never shuffled. Expanding-window folds, each testing one calend
 
 ## Results
 
-Run the pipeline and fill this in from `results/metrics.csv`. Do not enter numbers that did not come from your own run.
-
-| Model | Backtest MAE (MW) | Hold-out MAE (MW) | Hold-out MAPE | Top-5% hours MAE | Skill vs 168h | Skill vs operator |
-|---|---|---|---|---|---|---|
-| baseline_168h | [   ] | [   ] | [   ] | [   ] | 0 | [   ] |
-| operator_DF | [   ] | [   ] | [   ] | [   ] | [   ] | 0 |
-| ridge | [   ] | [   ] | [   ] | [   ] | [   ] | [   ] |
-| hgb | [   ] | [   ] | [   ] | [   ] | [   ] | [   ] |
-
-Prediction intervals (10th to 90th percentile, quantile gradient boosting): hold-out coverage [   ]% against a nominal 80%; average width [   ] MW; coverage on heat-wave days [   ]%.
-
-Charts: `charts/heatwave_week.png`, `charts/error_by_hour.png`, `charts/daily_shape.png`.
-
-**What I found (write from your own results):**
+Not yet run on real data. Results, charts and error analysis will be added after the first full backtest.
 
 ## Error analysis
 
@@ -91,4 +80,4 @@ pytest tests               # no network needed
 ## Next steps
 
 - Replace actual temperature with a forecast temperature feature to measure the real cost of weather error.
-- Feed a forecasted day into my [dispatch optimization model](https://github.com/anisharsingh/energy-dispatch-optimization) as demand and measure what a 3% forecast miss costs in the unit-commitment schedule.
+- Feed a forecasted day into a unit-commitment dispatch model as demand and measure what a 3% forecast miss costs in the schedule.

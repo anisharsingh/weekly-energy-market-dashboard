@@ -43,9 +43,12 @@ A week runs Saturday to Friday and is labelled by the Friday. EIA releases petro
 3. I run all cells in `dashboard.ipynb`.
 4. I write that week's five sentences in `commentary/`, using the previous entry as a template.
 5. I commit the data and the commentary separately, then push:
-   `git add data/weekly.csv && git commit -m "Data: week ending YYYY-MM-DD"`
-   `git add commentary && git commit -m "Commentary: week ending YYYY-MM-DD"`
-   `git push`
+
+   ```
+   git add data/weekly.csv && git commit -m "Data: week ending YYYY-MM-DD"
+   git add commentary && git commit -m "Commentary: week ending YYYY-MM-DD"
+   git push
+   ```
 
 ## Setup
 
