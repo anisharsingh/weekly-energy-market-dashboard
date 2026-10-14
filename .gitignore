@@ -7,3 +7,6 @@ __pycache__/
 .edit_backup/
 .edit_backup/
 .edit_backup_rolls/
+forecasting/data/*.csv
+forecasting/results/oof_predictions.csv
+.pytest_cache/

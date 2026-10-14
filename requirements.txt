@@ -3,3 +3,5 @@ matplotlib
 requests
 yfinance
 jupyter
+scikit-learn
+pytest
