@@ -18,6 +18,7 @@ Week ending Oct 9: Hurricane Isaias shut in most US Gulf offshore oil output and
 | `update_data.py` | Script I run to add new weeks and pull data from EIA, Yahoo Finance and Open-Meteo |
 | `contract_rolls.py` | Computes WTI and Brent contract expiry dates and flags the weeks that contain a roll |
 | `tests/` | Tests for the contract-roll calculation |
+| `forecasting/` | Day-ahead NYISO load forecast (pandas, scikit-learn) built on the same EIA data ([README](forecasting/README.md)) |
 
 ## Commentary
 
@@ -65,8 +66,3 @@ By default `update_data.py` only fills blank cells. `--overwrite` replaces exist
 - WTI and Brent are Friday front-month futures settles from Yahoo Finance. Inventories, storage, Henry Hub and electricity demand come from the EIA API, and weather comes from Open-Meteo, so running `update_data.py` reproduces the table.
 - Yahoo's continuous futures (`CL=F`, `BZ=F`) switch to the next contract near expiry, which can distort weekly changes, especially for Brent. `update_data.py` computes each contract's expiry date (WTI: three business days before the 25th of the month before delivery; Brent: last business day of the second month before delivery) and records it in `wti_roll_date` and `brent_roll_date` for the week it falls in. The notebook marks those weeks on the charts. The calendar is approximate and Yahoo can switch a day or two away from expiry, so a flag means a roll happened around that week. Brent rolled from November to December in the week ending Oct 2, for example.
 - HDD/CDD is an unweighted average of five large cities, so it is only a rough stand-in for the population-weighted NOAA figure.
-
-## Next steps
-
-- Compare each week's gas storage injection and crude stock change to the five-year average.
-- Add a roll-adjusted price series so weekly changes are like-for-like.

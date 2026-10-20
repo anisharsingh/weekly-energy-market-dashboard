@@ -1,0 +1,7 @@
+{
+  "nominal": 0.8,
+  "holdout_coverage": 0.6595289079229122,
+  "mean_width_MW": 2071.02179701029,
+  "heat_wave_hours_in_holdout": 72,
+  "heat_wave_coverage": 0.3194444444444444
+}
