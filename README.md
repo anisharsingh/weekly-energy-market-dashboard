@@ -6,7 +6,7 @@ I track the US oil and gas market every week to build real fluency in how energy
 
 ## Latest read
 
-Week ending Oct 9: Hurricane Isaias shut in most US Gulf offshore oil output while Iran talks and China's planned product-export restart eased supply fears. WTI $91.85, Brent $104.72. [Full entry](commentary/2026-10-09.md) · [All weeks](commentary/README.md)
+Week ending Oct 9: Hurricane Isaias shut in most US Gulf offshore oil output and drove the biggest US crude draw since February (8.6 mb, to 415.6 mb), while WTI settled at $91.85 and Brent at $104.72. [Full entry](commentary/2026-10-09.md) · [All weeks](commentary/README.md)
 
 ## What's in this repo
 
@@ -67,6 +67,7 @@ By default `update_data.py` only fills blank cells. `--overwrite` replaces exist
 - Yahoo's continuous futures (`CL=F`, `BZ=F`) switch to the next contract near expiry, which can distort weekly changes, especially for Brent. `update_data.py` computes each contract's expiry date (WTI: three business days before the 25th of the month before delivery; Brent: last business day of the second month before delivery) and records it in `wti_roll_date` and `brent_roll_date` for the week it falls in. The notebook marks those weeks on the charts. The calendar is approximate and Yahoo can switch a day or two away from expiry, so a flag means a roll happened around that week. Brent rolled from November to December in the week ending Oct 2, for example.
 - HDD/CDD is an unweighted average of five large cities, so it is only a rough stand-in for the population-weighted NOAA figure.
 
-## To do
+## Next steps
 
-- Add the week ending Oct 9 inventory and storage data after EIA releases it on Oct 14 and 15.
+- Compare each week's gas storage injection and crude stock change to the five-year average.
+- Add a roll-adjusted price series so weekly changes are like-for-like.
