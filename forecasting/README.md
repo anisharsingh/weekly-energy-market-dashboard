@@ -60,10 +60,11 @@ Time-based backtest with monthly expanding-window folds plus a final three-month
 
 1. On the final 1,868-hour hold-out, gradient boosting had a mean absolute error of 840 MW (4.9%), against 1,724 MW for the same hour last week, a skill score of 0.51.
 2. Ridge regression reached 992 MW, so gradient boosting was 15% lower in error than the linear model.
-3. NYISO's own day-ahead forecast had a hold-out error of 441 MW, and my model's skill score against it was -0.90, meaning the operator forecast was more accurate.
-4. Error was largest at local hour 14 (1,175 MW), and on heat-wave days (daily high of 90F or more, 1,824 hours) it averaged 1,140 MW against 719 MW on other days across the whole backtest.
-5. The 10th-to-90th percentile interval from quantile gradient boosting covered 66% of hold-out hours against a nominal 80%, with an average width of 2,071 MW and 32% coverage on heat-wave hours.
-6. Permutation importance on the hold-out ranked temp_f and lag_48 as the most important features.
+3. On the top 5% of load hours the hold-out error rose to 1,352 MW.
+4. NYISO's own day-ahead forecast had a hold-out error of 441 MW, 53% of my model's, so the operator forecast remains the one to beat.
+5. Error was largest at local hour 14 (1,175 MW), and on heat-wave days (daily high of 90F or more, 1,824 hours) it averaged 1,140 MW against 719 MW on other days across the whole backtest.
+6. The 10th-to-90th percentile interval from quantile gradient boosting covered 66% of hold-out hours against a nominal 80%, with an average width of 2,071 MW and 32% coverage on heat-wave hours.
+7. Permutation importance on the hold-out ranked temp_f and lag_48 as the most important features.
 
 **Actual vs forecast around the hottest day**
 
