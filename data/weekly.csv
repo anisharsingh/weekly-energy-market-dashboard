@@ -3,4 +3,5 @@ week_ending,wti_settle,brent_settle,henry_hub_spot,crude_stocks_mb,cushing_mb,re
 2026-09-18,100.3,103.87,2.97,426.398,23.748,94.0,206.046,3351.0,0.0,75.82,13284.864,,,EIA data; WTI and Brent settles confirmed.
 2026-09-25,92.41,104.32,3.21,427.32,24.301,92.5,204.362,3415.0,0.0,45.42,12111.635,2026-09-22,,EIA data; Brent is the Nov contract (rolled to Dec the next week); WTI weekly change includes a roll.
 2026-10-02,91.11,102.25,2.9,424.134,24.745,92.7,204.744,3500.0,0.0,45.0,11730.098,,2026-09-30,EIA data; Brent is the Dec contract after the roll (Reuters like-for-like +0.11%).
-2026-10-09,91.85,104.72,,,,,,,0.0,41.88,11446.253,,,Prices only. EIA inventories and gas storage due Oct 14 and 15.
+2026-10-09,91.85,104.72,3.1,415.577,26.607,93.5,208.262,3567.0,0.0,41.88,11446.253,,,Prices only. EIA inventories and gas storage due Oct 14 and 15.
+2026-10-16,101.41,109.86,,,,,,,0.0,30.34,11468.485,,,
