@@ -18,7 +18,6 @@ Week ending Oct 9: Hurricane Isaias shut in most US Gulf offshore oil output and
 | `update_data.py` | Script I run to add new weeks and pull data from EIA, Yahoo Finance and Open-Meteo |
 | `contract_rolls.py` | Computes WTI and Brent contract expiry dates and flags the weeks that contain a roll |
 | `tests/` | Tests for the contract-roll calculation |
-| `forecasting/` | Day-ahead NYISO load forecast built on the same EIA data ([README](forecasting/README.md)) |
 
 ## Commentary
 
