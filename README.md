@@ -6,7 +6,7 @@ I track the US oil and gas market every week to build real fluency in how energy
 
 ## Latest read
 
-Week ending Oct 9: Hurricane Isaias shut in most US Gulf offshore oil output and drove the biggest US crude draw since February (8.6 mb, to 415.6 mb), while WTI settled at $91.85 and Brent at $104.72. [Full entry](commentary/2026-10-09.md) · [All weeks](commentary/README.md)
+Week ending Oct 16: WTI jumped about 10% to $101.41 and Brent rose about 5% to $109.86, its highest settlement since May, narrowing the Brent-WTI spread to $8.45 on Persian Gulf supply worries and uncertainty over Russian diesel supply. [Full entry](commentary/2026-10-16.md) · [All weeks](commentary/README.md)
 
 ## What's in this repo
 
