@@ -18,7 +18,7 @@ To make leakage impossible by construction, every demand-based feature is lagged
 | Series | Source | Notes |
 |---|---|---|
 | Demand | EIA API v2, `electricity/rto/region-data`, respondent NYIS, type D | Hourly, UTC, Jan 1 2022 to present |
-| Operator forecast | Same route, type DF | Used as the toughest benchmark if well populated |
+| Operator forecast | Same route, type DF | Used as the toughest benchmark |
 | Temperature | Open-Meteo historical archive, New York City (40.71, -74.01) | Hourly, Fahrenheit, requested in UTC |
 
 `fetch_data.py` caches everything to `data/*.csv`, so the APIs are not hit again. `clean.py` then:
@@ -39,7 +39,7 @@ Hour of day, day of week, month, weekend flag, US federal holiday flag; temperat
 | Name | Description |
 |---|---|
 | `baseline_168h` | Same hour last week |
-| `operator_DF` | NYISO's own day-ahead forecast, if available |
+| `operator_DF` | NYISO's own day-ahead forecast |
 | `ridge` | Ridge regression with hour, day-of-week and month dummies plus the numeric features |
 | `hgb` | scikit-learn `HistGradientBoostingRegressor`, fixed seed, 300 iterations |
 
