@@ -6,7 +6,7 @@ I track the US oil and gas market every week to build real fluency in how energy
 
 ## Latest read
 
-Week ending Oct 16: WTI jumped about 10% to $101.41 and Brent rose about 5% to $109.86, its highest settlement since May, narrowing the Brent-WTI spread to $8.45 on Persian Gulf supply worries and uncertainty over Russian diesel supply. [Full entry](commentary/2026-10-16.md) · [All weeks](commentary/README.md)
+Week ending Oct 30: WTI settled at $104.12 and Brent's expiring December contract at $117.64, near six-month highs, as supply fears around the Strait of Hormuz outweighed diplomacy; US crude stocks fell for a fifth straight week to 409.8 mb. [Full entry](commentary/2026-10-30.md) · [All weeks](commentary/README.md)
 
 ## What's in this repo
 
